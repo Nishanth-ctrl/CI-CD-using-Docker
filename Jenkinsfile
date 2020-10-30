@@ -1,22 +1,19 @@
 pipeline {
-   agent any {
-   tools {git 'git'}
+   agent any
    environment
-    {
-       VERSION = "${BUILD_NUMBER}"
-       REPOSITORY_PREFIX='madavi'
-       registry = "amm123/tomcat"
-       registryCredential = 'dockerhub'
+   {
+       registry = "123456nish/nishanth"
+       registryCredential = 'Docker123' =>(credentials of docker)
        dockerImage = ''
    }
-   
+    
    stages {
      stage('checkout') {
           steps {
-           
-               git url: 'https://github.com/inspired123/CI-CD-using-Docker.git'
-           
-       }
+            
+               git branch: 'master', url: 'https://github.com/Nishanth-ctrl/Dockerfiles.git'
+            
+         }
        }
      stage('Image Build'){
           steps{
@@ -34,7 +31,6 @@ pipeline {
        }
            }
        }
-     
+
 }
 }
-} 
