@@ -3,7 +3,7 @@ pipeline {
    environment
    {
        registry = "123456nish/nishanth"
-       registryCredential = 'Docker123' =>(credentials of docker)
+       registryCredential = 'Docker123'
        dockerImage = ''
    }
     
