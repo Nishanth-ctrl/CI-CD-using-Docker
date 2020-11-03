@@ -1,4 +1,4 @@
-FROM tomcat:latest
+FROM tomcat:8.5.0
 
 LABEL maintainer="Nidhi Gupta"
 
